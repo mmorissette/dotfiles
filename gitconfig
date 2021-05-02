@@ -2,7 +2,7 @@
 	name = Martin Morissette
 	email = martin.morissette@shopify.com
 [core]
-	excludesfile = /Users/martinmorissette/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
 	commitGraph = true
@@ -13,7 +13,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/martinmorissette/.stCommitMsg
+	template = ~/.stCommitMsg
 [alias]
   pending = "!git log origin/$(git branch | grep "\\*" | cut -d ' ' -f2)..HEAD"
   ll = "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local"
