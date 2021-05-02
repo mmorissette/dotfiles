@@ -10,7 +10,7 @@ export BUNDLER_EDITOR=code
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 DEFAULT_USER="mmorissette"
 
@@ -56,7 +56,7 @@ DEFAULT_USER="mmorissette"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras git-flow colored-man colorize github brew osx zsh-syntax-highlighting)
+plugins=(git git-extras git-flow colorize github brew osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,4 +121,4 @@ export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
 # GOHOME
 export GOPATH=$HOME
 
-if [ -e /Users/martinmorissette/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/martinmorissette/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
