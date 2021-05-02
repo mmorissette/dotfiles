@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/martinmorissette/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Used for rails bundle command
 export BUNDLER_EDITOR=code
@@ -12,8 +12,7 @@ export BUNDLER_EDITOR=code
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-DEFAULT_USER="martinmorissette"
-export GITHUB_ACCESS_TOKEN="65e0c2e3603dcec5e1072206ff9959cbace57207"
+DEFAULT_USER="mmorissette"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

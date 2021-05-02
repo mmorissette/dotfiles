@@ -4,6 +4,7 @@
 ln -sf `pwd`/zshrc ~/.zshrc
 ln -sf `pwd`/gitignore ~/.gitignore
 ln -sf `pwd`/gitconfig ~/.gitconfig
+echo "✅ linked config files"
 
 if [ -d ~/.oh-my-zsh ] 
 then
