@@ -1,0 +1,53 @@
+{
+    "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
+    "terminal.integrated.fontSize": 12,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "files.insertFinalNewline": true,
+    "gitlens.keymap": "chorded",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.locate": {
+        "include": "**/*.rb",
+        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}"
+    },
+    "ruby.format": "rubocop",
+    "ruby.rubocop.onSave": true,
+    "ruby.lintDebounceTime": 800,
+    "editor.multiCursorModifier": "alt",
+    "workbench.editor.enablePreview": false,
+    "window.zoomLevel": 1,
+    "files.associations": {
+        "*.scss.liquid": "scss",
+        "*.js.liquid": "javascript",
+        "*.liquid": "liquid"
+    },
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "byesig.backgroundColor": "#1e1e1e",
+    "byesig.opacity": 0.4,
+    "go.formatTool": "goimports",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "byesig.fold": false,
+    "editor.accessibilitySupport": "off",
+}
