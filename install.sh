@@ -15,3 +15,13 @@ then
 else
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
+
+if [ -x "$(command -v code)" ]; then
+  <${DIR}/vscode-extensions.txt xargs -n 1 code --install-extension
+  echo "✅ Installed VSCode extensions"
+fi
+
+if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
+  ln -sf ${DIR}/vscode-settings.json ~/Library/Application\ Support/Code/User/settings.json
+  echo "✅ Linked VSCode settings"
+fi

@@ -1,6 +1,6 @@
 {
-    "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
-    "terminal.integrated.fontSize": 12,
+    // "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
+    // "terminal.integrated.fontSize": 12,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
@@ -13,8 +13,6 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
-        "suppressShowKeyBindingsNotice": true
     },
     "ruby.codeCompletion": "rcodetools",
     "ruby.intellisense": "rubyLocate",
@@ -34,7 +32,6 @@
         "*.liquid": "liquid"
     },
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

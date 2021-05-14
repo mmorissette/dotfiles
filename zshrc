@@ -116,4 +116,3 @@ export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
 # GOHOME
 export GOPATH=$HOME
 
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
