@@ -14,18 +14,17 @@
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
     },
-    "ruby.codeCompletion": "rcodetools",
-    "ruby.intellisense": "rubyLocate",
+    "ruby.codeCompletion": false,
+    "ruby.intellisense": false,
     "ruby.locate": {
         "include": "**/*.rb",
         "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}"
     },
-    "ruby.format": "rubocop",
+    "ruby.format": false,
     "ruby.rubocop.onSave": true,
     "ruby.lintDebounceTime": 800,
     "editor.multiCursorModifier": "alt",
     "workbench.editor.enablePreview": false,
-    "window.zoomLevel": 1,
     "files.associations": {
         "*.scss.liquid": "scss",
         "*.js.liquid": "javascript",
@@ -42,9 +41,26 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "byesig.backgroundColor": "#1e1e1e",
-    "byesig.opacity": 0.4,
+    "byesig.opacity": 0.5,
     "go.formatTool": "goimports",
     "javascript.updateImportsOnFileMove.enabled": "never",
     "byesig.fold": false,
     "editor.accessibilitySupport": "off",
+    "editor.inlineSuggest.enabled": true,
+    "ruby.useLanguageServer": false,
+    "ruby.lint": {
+        "rubocop": false
+    },
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.formatOnSave": true
+    },
+    "byesig.enabled": true,
+    "byesig.showIcon": false,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 2,
+    "shopifyLiquid.formatterDevPreview": true,
+    "[liquid]": {
+        "editor.defaultFormatter": "Shopify.theme-check-vscode"
+    },
 }
