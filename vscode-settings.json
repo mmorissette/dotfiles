@@ -4,6 +4,7 @@
     "editor.tabSize": 2,
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
+    "workbench.editor.revealIfOpen": true,
     "files.insertFinalNewline": true,
     "gitlens.keymap": "chorded",
     "gitlens.advanced.messages": {
@@ -53,14 +54,31 @@
     },
     "[ruby]": {
         "editor.defaultFormatter": "Shopify.ruby-lsp",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.semanticHighlighting.enabled": true
     },
     "byesig.enabled": true,
     "byesig.showIcon": false,
     "files.trimTrailingWhitespace": true,
-    "window.zoomLevel": 2,
     "shopifyLiquid.formatterDevPreview": true,
     "[liquid]": {
         "editor.defaultFormatter": "Shopify.theme-check-vscode"
     },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.rulers": [
+        120
+    ],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "themeCheck.checkOnChange": false,
+    "themeCheck.checkOnOpen": false,
+    "themeCheck.checkOnSave": false,
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Spinel"
 }

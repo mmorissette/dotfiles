@@ -100,8 +100,8 @@ function getWeather() {
 }
 alias weather=getWeather
 alias e=subl
-alias agenda="icalBuddy -nc -ea -eep -npn -iep 'datetime,title' -po 'datetime,title' -ps '| |' -b '### 📅 ' -tf '%I:%M%p' eventsToday"
-alias agenda_copy="icalBuddy -nc -ea -eep -npn -iep 'datetime,title' -po 'datetime,title' -ps '| |' -b '### 📅 ' -tf '%I:%M%p' eventsToday | clipcopy"
+alias agenda="icalBuddy -nc -ea -eep -npn -iep 'datetime,title' -po 'datetime,title' -ps '| |' -b '#### 📅 ' -tf '%I:%M%p' eventsToday"
+alias agenda_copy="icalBuddy -nc -ea -eep -npn -iep 'datetime,title' -po 'datetime,title' -ps '| |' -b '#### 📅 ' -tf '%I:%M%p' eventsToday | clipcopy"
 alias gs="git status"
 alias git-clean-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias git-purge-old-10-branch='git branch --sort=-committerdate | tail -n 10 | xargs git branch -D'
