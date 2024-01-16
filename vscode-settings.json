@@ -79,6 +79,7 @@
     "themeCheck.checkOnChange": false,
     "themeCheck.checkOnOpen": false,
     "themeCheck.checkOnSave": false,
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Spinel"
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Spinel",
+    "remote.SSH.connectTimeout": 150
 }

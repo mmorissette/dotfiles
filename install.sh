@@ -25,3 +25,8 @@ if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
   ln -sf ${DIR}/vscode-settings.json ~/Library/Application\ Support/Code/User/settings.json
   echo "✅ Linked VSCode settings"
 fi
+
+if [ "$SPIN" ]; then
+  export BUILDKITE_TOKEN="$(cat /etc/spin/secrets/buildkite)"
+fi
+
