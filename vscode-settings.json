@@ -15,15 +15,6 @@
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
     },
-    "ruby.codeCompletion": false,
-    "ruby.intellisense": false,
-    "ruby.locate": {
-        "include": "**/*.rb",
-        "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}"
-    },
-    "ruby.format": false,
-    "ruby.rubocop.onSave": true,
-    "ruby.lintDebounceTime": 800,
     "editor.multiCursorModifier": "alt",
     "workbench.editor.enablePreview": false,
     "files.associations": {
@@ -31,7 +22,6 @@
         "*.js.liquid": "javascript",
         "*.liquid": "liquid"
     },
-    "gitlens.views.fileHistory.enabled": true,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -41,27 +31,29 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "byesig.backgroundColor": "#1e1e1e",
-    "byesig.opacity": 0.5,
     "go.formatTool": "goimports",
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "byesig.fold": false,
     "editor.accessibilitySupport": "off",
     "editor.inlineSuggest.enabled": true,
-    "ruby.useLanguageServer": false,
-    "ruby.lint": {
-        "rubocop": false
-    },
     "[ruby]": {
         "editor.defaultFormatter": "Shopify.ruby-lsp",
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
-        "editor.semanticHighlighting.enabled": true
+        "editor.semanticHighlighting.enabled": true,
+        "files.trimTrailingWhitespace": true,
+        "files.trimFinalNewlines": true,
+        "files.insertFinalNewline": true,
+        "editor.rulers": [
+            120
+        ]
     },
     "byesig.enabled": true,
     "byesig.showIcon": false,
+    "byesig.backgroundColor": "#1e1e1e",
+    "byesig.opacity": 0.5,
+    "byesig.fold": false,
     "files.trimTrailingWhitespace": true,
     "shopifyLiquid.formatterDevPreview": true,
     "[liquid]": {
@@ -81,5 +73,26 @@
     "themeCheck.checkOnSave": false,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Spinel",
-    "remote.SSH.connectTimeout": 150
+    "remote.SSH.connectTimeout": 150,
+    "rubyLsp.enabledFeatures": {
+        "codeActions": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true,
+        "definition": true,
+        "workspaceSymbol": true,
+        "signatureHelp": true
+    },
+    "rubyLsp.formatter": "rubocop",
+    "sorbet.enabled": true
 }

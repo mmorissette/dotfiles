@@ -12,7 +12,6 @@ killalau.vscode-liquid-snippets
 kumar-harsh.graphql-for-vscode
 mechatroner.rainbow-csv
 michelemelluso.code-beautifier
-miguel-savignano.ruby-symbols
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vsliveshare.vsliveshare
