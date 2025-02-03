@@ -55,7 +55,7 @@
     "byesig.opacity": 0.5,
     "byesig.fold": false,
     "files.trimTrailingWhitespace": true,
-    "shopifyLiquid.formatterDevPreview": true,
+    "shopifyLiquid.legacyMode": false,
     "[liquid]": {
         "editor.defaultFormatter": "Shopify.theme-check-vscode"
     },
@@ -72,7 +72,6 @@
     "themeCheck.checkOnOpen": false,
     "themeCheck.checkOnSave": false,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Spinel",
     "remote.SSH.connectTimeout": 150,
     "rubyLsp.enabledFeatures": {
         "codeActions": true,
@@ -94,5 +93,11 @@
         "signatureHelp": true
     },
     "rubyLsp.formatter": "rubocop",
-    "sorbet.enabled": true
+    "sorbet.enabled": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "diffEditor.ignoreTrimWhitespace": true,
+    "git.openRepositoryInParentFolders": "always"
 }
