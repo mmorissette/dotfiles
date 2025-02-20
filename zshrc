@@ -122,3 +122,6 @@ export GOPATH=$HOME
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
+
+# Private tools
+export PATH="/Users/martinmorissette/src/github.com/mmorissette/shopify-tools:$PATH"
