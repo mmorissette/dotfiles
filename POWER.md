@@ -6,6 +6,11 @@ Listing power settings
 pmset -g
 ```
 
+Listing scheduled events
+```
+sudo pmset -g sched
+```
+
 ### Dark Wake 
 
 > If your Mac has a high Dark Wake count, it might be waking frequently, leading to battery drain in sleep mode. This could be caused by:
@@ -43,3 +48,16 @@ sudo pmset -a powernap 0
 
 Many blog post suggest to disable Screen Time to avoid waking up the mac. Disable fron `System Preferences > Screen Time`.
 
+### Disabling scheduled events
+
+Listing scheduled events
+
+```
+sudo pmset -g sched
+```
+
+Cancelling all 
+
+```
+sudo pmset schedule cancelall
+```
