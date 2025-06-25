@@ -6,7 +6,7 @@
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -14,8 +14,15 @@
 	template = ~/.stCommitMsg
 [alias]
   pending = "!git log origin/$(git branch | grep "\\*" | cut -d ' ' -f2)..HEAD"
-  ll = "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local"
+	ll = "!~/src/github.com/mmorissette/dotfiles/git-ll"
 [fetch]
 	prune = true
 [include]
 	path = /Users/martinmorissette/.config/dev/gitconfig
+[maintenance]
+	repo = /Users/martinmorissette/world/trees/root/src
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

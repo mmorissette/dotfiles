@@ -109,11 +109,6 @@ alias f="fzf --preview 'pygmentize {}'"
 #alias python='python3'
 
 
-# Disable turbo bar
-# export TURBO_BAR=0
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
-
 # GOHOME
 export GOPATH=$HOME
 
@@ -124,4 +119,4 @@ export GOPATH=$HOME
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
 
 # Private tools
-export PATH="/Users/martinmorissette/src/github.com/mmorissette/shopify-tools:$PATH"
+export PATH="/Users/martinmorissette/src/github.com/mmorissette/shopify-tools/bin:$PATH"

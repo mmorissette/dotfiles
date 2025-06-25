@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Get the repository URL and convert it to GitHub URL format
+REPO_URL=$(git remote get-url origin 2>/dev/null | sed -E 's|^git@github\.com:|https://github.com/|' | sed -E 's|\.git$||')
+
+# Check if we got a valid GitHub URL
+if [[ ! "$REPO_URL" =~ ^https://github\.com/ ]]; then
+    echo "Error: Not a GitHub repository or no origin remote found" >&2
+    exit 1
+fi
+
+# Fast hyperlink processing - use simple sed + lightweight python
+git log --color=always --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=local "$@" | \
+sed -E 's/#([0-9]+)/PRLINK\1PRLINK/g' | \
+python3 -u -c "
+import sys, signal
+signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+repo='$REPO_URL'
+try:
+    for line in sys.stdin:
+        while 'PRLINK' in line:
+            start = line.find('PRLINK')
+            if start == -1: break
+            end = line.find('PRLINK', start + 6)
+            if end == -1: break
+            num = line[start+6:end]
+            replacement = f'\033]8;;{repo}/pull/{num}\033\\\\#{num}\033]8;;\033\\\\'
+            line = line[:start] + replacement + line[end+6:]
+        print(line, end='')
+except: pass
+" | \
+less
