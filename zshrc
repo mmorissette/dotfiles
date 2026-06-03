@@ -37,7 +37,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -106,7 +106,11 @@ alias gs="git status"
 alias git-clean-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias git-purge-old-10-branch='git branch --sort=-committerdate | tail -n 10 | xargs git branch -D'
 alias f="fzf --preview 'pygmentize {}'"
+alias cdtm3="cd ~/src/github.com/shopify-playground/tm3-online-store-sandbox"
+alias cdai="cd ~/src/github.com/shopify-playground/mmorissette-tools/ai"
+alias ccs="devx claude --dangerously-skip-permissions"
 #alias python='python3'
+
 
 
 # GOHOME
@@ -118,5 +122,19 @@ export GOPATH=$HOME
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
 
+eval "$(try init)"
+
 # Private tools
-export PATH="/Users/martinmorissette/src/github.com/mmorissette/shopify-tools/bin:$PATH"
+export PATH="/Users/martinmorissette/src/github.com/mmorissette/shopify-tools/bin:/Users/martinmorissette/src/github.com/shopify-playground/mmorissette-tools/bin:$PATH"
+export PATH="$PATH:/Users/martinmorissette/.local/share/pnpm"
+
+# Added by tec agent
+[[ -x /Users/martinmorissette/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/martinmorissette/.local/state/tec/profiles/base/current/global/init zsh)"
+
+# World-aware prompt: show worktree + worldpath via `worldpath`
+if command -v worldpath >/dev/null 2>&1; then
+  setopt PROMPT_SUBST
+  PROMPT='%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) $(worldpath -z) $(git_prompt_info)'
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

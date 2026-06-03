@@ -14,13 +14,15 @@
 	template = ~/.stCommitMsg
 [alias]
   pending = "!git log origin/$(git branch | grep "\\*" | cut -d ' ' -f2)..HEAD"
-	ll = "!~/src/github.com/mmorissette/dotfiles/git-ll"
+	ll = "!~/src/github.com/shopify-playground/mmorissette-tools/bin/git-ll"
 [fetch]
 	prune = true
+[maintenance]
+	repo = /Users/martinmorissette/world/git
 [include]
 	path = /Users/martinmorissette/.config/dev/gitconfig
-[maintenance]
-	repo = /Users/martinmorissette/world/trees/root/src
+[shop-world "stale-pr-cutoff"]
+	main = 1780336348
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

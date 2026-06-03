@@ -7,6 +7,7 @@
     "workbench.editor.revealIfOpen": true,
     "files.insertFinalNewline": true,
     "gitlens.keymap": "chorded",
+    "gitlens.ai.enabled": false,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -98,6 +99,10 @@
     "[yaml]": {
         "diffEditor.ignoreTrimWhitespace": true
     },
-    "diffEditor.ignoreTrimWhitespace": true,
-    "git.openRepositoryInParentFolders": "always"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "always",
+    "claudeCode.preferredLocation": "panel",
+    "terminal.integrated.initialHint": false,
+    "workbench.activityBar.compact": true,
+    "typescript.experimental.useTsgo": true
 }
